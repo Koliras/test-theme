@@ -1,3 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap");
 body {
-  background-color: aqua;
+  margin: 0;
+  font-family: Inter, Geneva, Tahoma, sans-serif;
+}
+
+.shopify-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.productsPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1000px;
+}
+.productsPage--position {
+  margin: 40px auto;
+}
+@media (min-width: 640px) {
+  .productsPage--position {
+    margin: 100px auto;
+  }
+}
+@media (min-width: 1024px) {
+  .productsPage--position {
+    margin: 140px auto;
+  }
+}
+.productsPage__header {
+  color: #367488;
+  display: inline-block;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 42px;
+  letter-spacing: 0em;
+  margin-block: 0 80px;
+}
+@media (min-width: 640px) {
+  .productsPage__header {
+    font-size: 48px;
+  }
+}
+.productsPage__content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .productsPage__content {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -1,3 +1,12 @@
 body {
-  background-color: aqua;
+  margin: 0;
+  font-family: Inter, Geneva, Tahoma, sans-serif;
+}
+
+.shopify-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
 }

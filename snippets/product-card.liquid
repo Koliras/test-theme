@@ -1,0 +1,16 @@
+<div class="productCard">
+  <img
+    src="{{ product.featured_image | image_url }}"
+    class="productCard__image"
+    alt="Image of {{ product.title }}"
+  />
+  <div>
+    <h3 class="productCard__title">
+      {{ product.title }}
+    </h3>
+
+    <button class="button">
+      Add to cart - {{ product.price | money }}
+    </button>
+  </div>
+</div>
