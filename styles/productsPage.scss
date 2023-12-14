@@ -1,0 +1,47 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+.productsPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1000px;
+
+  &--position {
+    margin: 40px auto;
+
+    @include onTablet {
+      margin: 100px auto;
+    }
+
+    @include onDesktop {
+      margin: 140px auto;
+    }
+  }
+
+  &__header {
+    color: $secondary-color;
+    display: inline-block;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 42px;
+    letter-spacing: 0em;
+    margin-block: 0 80px;
+
+    @include onTablet {
+      font-size: 48px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    @include onDesktop {
+      grid-template-columns: 1fr 1fr;
+      gap: 90px 100px;
+    }
+  }
+}

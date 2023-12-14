@@ -1,3 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap");
 body {
-  background-color: aqua;
+  margin: 0;
+  font-family: Inter, Geneva, Tahoma, sans-serif;
+}
+
+.shopify-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.button {
+  background-color: #367488;
+  width: 100%;
+  border: 0;
+  border-radius: 40px;
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px; /* 185.714% */
+  padding: 20px 35px;
+  box-sizing: border-box;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:active {
+  background-color: #244a57;
+}
+
+.productsPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1000px;
+}
+.productsPage--position {
+  margin: 40px auto;
+}
+@media (min-width: 640px) {
+  .productsPage--position {
+    margin: 100px auto;
+  }
+}
+@media (min-width: 1024px) {
+  .productsPage--position {
+    margin: 140px auto;
+  }
+}
+.productsPage__header {
+  color: #367488;
+  display: inline-block;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 42px;
+  letter-spacing: 0em;
+  margin-block: 0 80px;
+}
+@media (min-width: 640px) {
+  .productsPage__header {
+    font-size: 48px;
+  }
+}
+.productsPage__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 1024px) {
+  .productsPage__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 90px 100px;
+  }
+}
+
+.productCard {
+  width: 375px;
+}
+@media (min-width: 640px) {
+  .productCard {
+    width: 443px;
+  }
+}
+.productCard__image {
+  display: block;
+  width: 100%;
+  height: 295px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .productCard__image {
+    height: 357px;
+    margin-bottom: 50px;
+  }
+}
+.productCard__content {
+  margin: 0 16px;
+}
+@media (min-width: 640px) {
+  .productCard__content {
+    margin: 0;
+  }
+}
+.productCard__title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+@media (min-width: 640px) {
+  .productCard__title {
+    font-size: 24px;
+  }
 }
