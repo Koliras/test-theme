@@ -9,8 +9,11 @@
       {{ product.title }}
     </h3>
 
-    <button class="button">
-      Add to cart - {{ product.price | money }}
-    </button>
+    <form method="post" action="/cart/add">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+      <button type="submit" class="button">
+        Add to cart - {{ product.price | money }}
+      </button>
+    </form>
   </div>
 </div>

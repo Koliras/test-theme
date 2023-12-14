@@ -1,3 +1,5 @@
+{% assign cartProductIds = cart.items | map: 'product_id' %}
+
 <div class="productsPage productsPage--position">
   <h2 class="productsPage__header">
     Featured Products
@@ -5,7 +7,11 @@
 
   <div class="productsPage__content">
     {% for product in collections['frontpage'].products %}
-      {% include 'product-card', product: product %}
+      {% if cartProductIds contains product.id %}
+        {{ nil }}
+      {% else %}
+        {% include 'product-card', product: product %}
+      {% endif %}
     {% endfor %}
   </div>
 </div>

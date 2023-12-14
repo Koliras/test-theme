@@ -1,0 +1,5 @@
+{% assign cartProductIds = cart.items | map: 'product_id' | join: ',' %}
+<h1>{{ cartProductIds }}</h1>
+{% for cartItem in cart.items %}
+  <p>{{ cartItem.title }}</p>
+{% endfor %}
