@@ -1,0 +1,26 @@
+<div class="productsPage">
+  <h2 class="productsPage__header">
+    Featured Products
+  </h2>
+
+  <ul class="productsPage__content">
+    {% for product in collections['frontpage'].products %}
+      <li class="productPage__content__product">
+        <img
+          src="{{ product.featured_image | image_url }}"
+          class="productPage__content__product__image"
+          alt="Image of {{ product.title }}"
+        />
+        <div>
+          <h3 class="productPage__content__product__title">
+            {{ product.title }}
+          </h3>
+
+          <button class="button">
+            Add to cart - {{ product.price | money }}
+          </button>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
